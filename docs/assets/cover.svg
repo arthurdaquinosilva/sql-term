@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="879" height="385" viewBox="0 0 879 385" role="img" aria-label=":sql">
+<style>text{font-family:'SF Mono',Menlo,Monaco,'DejaVu Sans Mono',Consolas,monospace;font-size:14px;white-space:pre;fill:#c0caf5}.b{font-weight:bold}.i{font-style:italic}.u{text-decoration:underline}</style>
+<rect width="879" height="385" rx="10" fill="#000000"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f57"/>
+<circle cx="42" cy="20" r="6" fill="#febc2e"/>
+<circle cx="62" cy="20" r="6" fill="#28c840"/>
+<text x="439.5" y="25" text-anchor="middle" style="fill:#6b6b6b;font-size:12px">:sql</text>
+<rect x="34.9" y="91.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="43.3" y="91.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="60.1" y="91.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="68.6" y="82" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="77.0" y="82" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="85.4" y="82" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="93.9" y="82" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="110.7" y="91.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="119.2" y="82" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="127.6" y="82" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="136.0" y="82" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="144.4" y="91.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="161.3" y="82" width="8.7" height="19" fill="rgb(115,218,202)"/>
+<rect x="34.9" y="101" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="43.3" y="101" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="60.1" y="101" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="68.6" y="110.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="77.0" y="110.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="85.4" y="110.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="110.7" y="101" width="8.7" height="19" fill="rgb(115,218,202)"/>
+<rect x="144.4" y="101" width="8.7" height="19" fill="rgb(115,218,202)"/>
+<rect x="161.3" y="101" width="8.7" height="19" fill="rgb(115,218,202)"/>
+<rect x="34.9" y="129.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="43.3" y="129.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="93.9" y="120" width="8.7" height="19" fill="rgb(115,218,202)"/>
+<rect x="110.7" y="120" width="8.7" height="19" fill="rgb(115,218,202)"/>
+<rect x="127.6" y="120" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="136.0" y="129.5" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="144.4" y="120" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="161.3" y="120" width="8.7" height="19" fill="rgb(115,218,202)"/>
+<rect x="34.9" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="43.3" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="60.1" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="68.6" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="77.0" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="85.4" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="119.2" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="127.6" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="144.4" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="161.3" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="169.7" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="178.2" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="186.6" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<rect x="195.0" y="139" width="8.7" height="9.5" fill="rgb(115,218,202)"/>
+<text y="191"><tspan x="18.0">  v0.5.0                 </tspan></text>
+<text y="229"><tspan x="18.0">  Connected as           </tspan></text>
+<text y="248"><tspan x="18.0">  Database      </tspan><tspan x="152.9" style="fill:rgb(187,154,247)" class="b">/tmp/sql-term-demo/shop.db</tspan></text>
+<text y="267"><tspan x="18.0">  Host          </tspan><tspan x="152.9" style="fill:rgb(187,154,247)" class="b">local</tspan></text>
+<text y="305"><tspan x="18.0" style="fill:rgb(42,46,66)">────────────────────────────────────────────────────────────────────────────────────────────────────</tspan></text>
+<text y="324"><tspan x="18.0" style="fill:rgb(115,122,162)">&gt;</tspan><tspan x="34.9" style="fill:rgb(86,95,137)">Type a SQL query, / for commands, ! for shell</tspan></text>
+<text y="343"><tspan x="18.0" style="fill:rgb(42,46,66)">────────────────────────────────────────────────────────────────────────────────────────────────────</tspan></text>
+<text y="362"><tspan x="34.9" style="fill:rgb(115,122,162)">-- INSERT --</tspan><tspan x="633.4" style="fill:rgb(86,95,137)">/tmp/sql-term-demo/shop.db</tspan></text>
+</svg>

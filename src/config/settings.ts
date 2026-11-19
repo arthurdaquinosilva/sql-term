@@ -1,8 +1,8 @@
 import { readFileSync } from 'node:fs';
-import { homedir } from 'node:os';
 import { join } from 'node:path';
+import { CONFIG_DIR } from './paths.js';
 
-export const SETTINGS_FILE = join(homedir(), '.config', 'querky', 'settings.json');
+export const SETTINGS_FILE = join(CONFIG_DIR, 'settings.json');
 
 export interface Settings {
   /** Two-key INSERT-mode sequences mapped to Escape, e.g. { "jj": "<Esc>" }. */

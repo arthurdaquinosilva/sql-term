@@ -1,5 +1,5 @@
 // pitch: cool blue/violet hues on a pitch-black terminal, the palette shared with
-// ember, shtick, cinder, flare and lore; each tool gets its own accent (querky's is teal).
+// :py, :sh, :js, :http and :docs; each tool gets its own accent (:sql's is teal).
 export const theme = {
   accent: '#73daca',
   fg: '#c0caf5',

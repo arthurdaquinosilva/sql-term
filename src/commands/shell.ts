@@ -65,7 +65,7 @@ export function runShell(command: string): Promise<ShellResult> {
     if (histResult.exitCode !== 0 || !rest) return Promise.resolve(histResult);
 
     // Write history to a temp file so the shell can pipe/redirect it naturally.
-    const tmpPath = join(tmpdir(), `querky-hist-${Date.now()}.txt`);
+    const tmpPath = join(tmpdir(), `sql-term-hist-${Date.now()}.txt`);
     writeFileSync(tmpPath, histResult.stdout);
     const piped = `cat '${tmpPath}' ${rest}`;
     const shell = process.env.SHELL ?? '/bin/sh';

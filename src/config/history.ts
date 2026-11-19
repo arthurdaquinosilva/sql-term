@@ -1,8 +1,8 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { homedir } from 'node:os';
 import { join } from 'node:path';
+import { CONFIG_DIR } from './paths.js';
 
-const DIR = join(homedir(), '.config', 'querky');
+const DIR = CONFIG_DIR;
 const FILE = join(DIR, 'history.json');
 const MAX = 1000;
 

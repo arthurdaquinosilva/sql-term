@@ -19,7 +19,7 @@ const { values } = parseArgs({
 const initialDsn = values.connection as string | undefined;
 const aiUrl = values['ai-url'] as string;
 const aiModel = values['ai-model'] as string;
-const aiKey = (values['api-key'] as string) || process.env.Q_CLI_API_KEY || '';
+const aiKey = (values['api-key'] as string) || process.env.SQL_TERM_API_KEY || process.env.QUERKY_API_KEY || process.env.Q_CLI_API_KEY || '';
 
 interface RootProps {
   initialDsn?: string;

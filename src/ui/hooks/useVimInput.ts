@@ -43,7 +43,7 @@ export interface PromptInputOptions {
 
 function openEditor(initial: string): string | null {
   const editor = process.env.VISUAL ?? process.env.EDITOR ?? 'vi';
-  const tmpPath = join(tmpdir(), `querky-edit-${Date.now()}.sql`);
+  const tmpPath = join(tmpdir(), `sql-term-edit-${Date.now()}.sql`);
   const ttyStdin = process.stdin as { setRawMode?: (mode: boolean) => void };
   try {
     writeFileSync(tmpPath, initial);

@@ -34,7 +34,7 @@ export async function* streamExplain(
         '  ollama serve\n' +
         '  ollama pull llama3.2\n\n' +
         'Option B — use Groq (free, fast):\n' +
-        '  querky -c <dsn> --ai-url https://api.groq.com/openai/v1 \\\n' +
+        '  :sql -c <dsn> --ai-url https://api.groq.com/openai/v1 \\\n' +
         '    --ai-model llama-3.1-8b-instant --api-key YOUR_GROQ_KEY'
       );
     }

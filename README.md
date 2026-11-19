@@ -1,8 +1,10 @@
-# Querky
+# :sql
 
-![Querky Cover](querky-cover.png)
+<img src="https://raw.githubusercontent.com/arthurdaquinosilva/sql-term/main/docs/assets/cover.svg?sanitize=true" alt=":sql's start screen: the pixel :SQL wordmark, version and connection info, the input between two rules and the footer" width="820">
 
-A quirky terminal SQL client with vim keybindings, schema-aware autocomplete, query aliases, and AI-powered query explanation.
+<img src="https://raw.githubusercontent.com/arthurdaquinosilva/sql-term/main/docs/assets/demo.svg?sanitize=true" alt=":sql running a query against SQLite: a join with GROUP BY and its result table" width="820">
+
+A terminal SQL client with vim keybindings, schema-aware autocomplete, query aliases, and AI-powered query explanation.
 
 ## Features
 
@@ -33,23 +35,23 @@ A quirky terminal SQL client with vim keybindings, schema-aware autocomplete, qu
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/arthurdaquinosilva/querky/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/arthurdaquinosilva/sql-term/main/install.sh | sh
 ```
 
-That downloads querky from GitHub into `~/.local/lib/querky`, builds it, and links the `querky` command in `~/.local/bin`. To update, run the installer again. Other options:
+That downloads :sql from GitHub into `~/.local/lib/sql-term`, builds it, and links the `:sql` command in `~/.local/bin`. To update, run the installer again. Other options:
 
 ```bash
-curl -fsSL .../install.sh | QUERKY_VERSION=v0.5.0 sh      # a specific tag or branch
+curl -fsSL .../install.sh | SQL_TERM_VERSION=v0.5.0 sh      # a specific tag or branch
 curl -fsSL .../install.sh | sh -s -- --uninstall          # remove it (settings, history and aliases are kept)
 ```
 
-querky isn't on npm; GitHub is the only place it's published.
+:sql isn't on npm; GitHub is the only place it's published.
 
 ### Install from source
 
 ```bash
-git clone https://github.com/arthurdaquinosilva/querky.git
-cd querky
+git clone https://github.com/arthurdaquinosilva/sql-term.git
+cd sql-term
 pnpm install
 pnpm build
 pnpm install -g .
@@ -63,22 +65,22 @@ pnpm install -g .
 
 ```bash
 # PostgreSQL
-querky --connection postgresql://user:pass@localhost/mydb
-querky -c postgresql://user:pass@localhost/mydb
+:sql --connection postgresql://user:pass@localhost/mydb
+:sql -c postgresql://user:pass@localhost/mydb
 
 # MySQL
-querky -c mysql://user:pass@localhost/mydb
+:sql -c mysql://user:pass@localhost/mydb
 
 # SQLite
-querky -c sqlite:///path/to/database.db
+:sql -c sqlite:///path/to/database.db
 ```
 
 ### With the interactive wizard
 
-Run `querky` with no arguments and fill in the form:
+Run `:sql` with no arguments and fill in the form:
 
 ```bash
-querky
+:sql
 ```
 
 Use **Tab** or **↑↓** to move between fields, **←→** to cycle the driver, **Enter** to connect. Passwords are saved to the OS keychain after a successful connection and pre-filled on the next run.
@@ -87,7 +89,7 @@ Use **Tab** or **↑↓** to move between fields, **←→** to cycle the driver
 
 ## AI Setup
 
-Querky can explain your queries using any OpenAI-compatible API.
+:sql can explain your queries using any OpenAI-compatible API.
 
 ### Groq (recommended — fast and free)
 
@@ -96,13 +98,13 @@ Querky can explain your queries using any OpenAI-compatible API.
 
 ```bash
 # Add to ~/.zshrc or ~/.bashrc
-export QUERKY_API_KEY=gsk_...
+export SQL_TERM_API_KEY=gsk_...
 ```
 
 3. Connect with Groq:
 
 ```bash
-querky -c postgresql://... \
+:sql -c postgresql://... \
   --ai-url https://api.groq.com/openai/v1 \
   --ai-model llama-3.1-8b-instant
 ```
@@ -115,7 +117,7 @@ ollama serve
 ```
 
 ```bash
-querky -c postgresql://... --ai-model llama3.2
+:sql -c postgresql://... --ai-model llama3.2
 ```
 
 Ollama is the default endpoint (`http://localhost:11434/v1`).
@@ -149,7 +151,7 @@ Type `/` and use **Tab** or **↑↓** to navigate and complete commands.
 
 ## Schema-aware Autocomplete
 
-Querky fetches your schema on connect and completes as you type. Press **Tab** to cycle through suggestions, **Enter** to accept.
+:sql fetches your schema on connect and completes as you type. Press **Tab** to cycle through suggestions, **Enter** to accept.
 
 | Context | Completes |
 |---|---|
@@ -186,7 +188,7 @@ Then invoke them like any other command:
 **Positional params** use `$1, $2, …` — pass values in order.
 **Named params** use `:param` — pass `key=value` pairs (quote values with spaces).
 
-Aliases are stored in `~/.config/querky/aliases.json` and are Tab-completable.
+Aliases are stored in `~/.config/sql-term/aliases.json` and are Tab-completable.
 
 ---
 
@@ -207,7 +209,7 @@ Users coming from `psql` can use familiar meta-commands:
 
 ## Vim Mode
 
-Querky starts in INSERT mode; the footer under the prompt shows `-- INSERT --`. Press `Escape` for NORMAL mode. The bindings follow Claude Code's vim mode.
+:sql starts in INSERT mode; the footer under the prompt shows `-- INSERT --`. Press `Escape` for NORMAL mode. The bindings follow Claude Code's vim mode.
 
 | Keys | Action |
 |---|---|
@@ -224,7 +226,7 @@ Querky starts in INSERT mode; the footer under the prompt shows `-- INSERT --`. 
 
 `j`/`k` (and ↑↓) move between lines and step through history at the first and last line. **Ctrl+R** searches history, **Ctrl+G** opens the input in `$EDITOR`, and `\` + Enter, Shift+Enter or Option+Enter add a new line. Press `?` on an empty prompt to see the shortcuts.
 
-To leave INSERT mode with `jj` (or another two-key sequence), add to `~/.config/querky/settings.json`:
+To leave INSERT mode with `jj` (or another two-key sequence), add to `~/.config/sql-term/settings.json`:
 
 ```json
 { "vimInsertModeRemaps": { "jj": "<Esc>" } }
@@ -236,7 +238,7 @@ Disable vim mode with `/toggle-vim-mode`.
 
 ## Shell Mode
 
-Prefix any command with `!` to run it in your shell without leaving querky:
+Prefix any command with `!` to run it in your shell without leaving :sql:
 
 ```
 ! ls -la
@@ -255,7 +257,7 @@ Output appears inline. ANSI colors and pipes are preserved.
 | `--connection`, `-c` | — | Connection string (optional — wizard shown if omitted) |
 | `--ai-url` | `http://localhost:11434/v1` | OpenAI-compatible API base URL |
 | `--ai-model` | `llama3.2` | Model name |
-| `--api-key` | `$QUERKY_API_KEY` | API key for remote endpoints |
+| `--api-key` | `$SQL_TERM_API_KEY` | API key for remote endpoints |
 
 ---
 

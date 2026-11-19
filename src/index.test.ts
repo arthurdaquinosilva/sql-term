@@ -1,5 +1,5 @@
 import { describe, it } from 'vitest';
 
-describe('querky', () => {
+describe(':sql', () => {
   it('has a test suite', () => {});
 });

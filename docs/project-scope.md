@@ -26,8 +26,8 @@ Developers who live in the command line.
 - `/connect [name]` — connect to a saved connection; if no name given, shows
   a list of available connections to pick from
 - Connections can also be passed as a CLI argument at startup:
-  `querky --connection local-mysql`
-- Connection configs saved locally (e.g., `~/.config/querky/connections.json`)
+  `:sql --connection local-mysql`
+- Connection configs saved locally (e.g., `~/.config/sql-term/connections.json`)
 - Multi-connection support: switch between connections in a session
 
 ### Aliases (saved queries)

@@ -6,10 +6,10 @@ declare const __PKG_VERSION__: string;
 const version = typeof __PKG_VERSION__ !== 'undefined' ? __PKG_VERSION__ : (process.env.npm_package_version ?? 'unknown');
 
 const WORDMARK = [
-  '▗▄▄▄▖ ▗▖ ▗▖▗▄▄▄▖▗▄▄▖ ▗▖ ▗▖▗▖  ▗▖',
-  '▐▌ ▐▌ ▐▌ ▐▌▐▌   ▐▌ ▐▌▐▌▗▞▘ ▝▚▞▘',
-  '▐▌ ▐▌ ▐▌ ▐▌▐▛▀▀▘▐▛▀▚▖▐▛▚▖   ▐▌',
-  '▐▙▄▟▙▖▝▚▄▞▘▐▙▄▄▖▐▌ ▐▌▐▌ ▐▌  ▐▌ ▄▄▄',
+  ' ▄▄ ▄▀▀▀▀ ▄▀▀▀▄ █',
+  ' ▀▀ ▀▄▄▄  █   █ █',
+  ' ▄▄     █ █ ▀▄▀ █',
+  ' ▀▀ ▀▀▀▀   ▀▀ ▀ ▀▀▀▀▀',
 ];
 
 
@@ -24,7 +24,7 @@ export function Banner({ connectionState }: BannerProps) {
 
   return (
     <Box flexDirection="column" marginTop={2} marginBottom={1}>
-      {/* Wordmark — horizontal magenta→orange gradient, with trailing cursor */}
+      {/* Wordmark: the pixel :SQL in the accent colour */}
       <Box flexDirection="column">
         {WORDMARK.map((line, li) => (
           <Box key={li}>

@@ -1,4 +1,5 @@
-const SERVICE = 'querky';
+const SERVICE = 'sql-term';
+const OLD_SERVICE = 'querky'; // passwords saved before the rename
 
 function accountKey(driver: string, user: string, host: string, port: number): string {
   return `${driver}:${user}@${host}:${port}`;
@@ -17,7 +18,8 @@ export async function savePassword(driver: string, user: string, host: string, p
 export async function getPassword(driver: string, user: string, host: string, port: number): Promise<string | null> {
   try {
     const keytar = await import('keytar');
-    return await keytar.default.getPassword(SERVICE, accountKey(driver, user, host, port));
+    const account = accountKey(driver, user, host, port);
+    return (await keytar.default.getPassword(SERVICE, account)) ?? (await keytar.default.getPassword(OLD_SERVICE, account));
   } catch {
     return null;
   }

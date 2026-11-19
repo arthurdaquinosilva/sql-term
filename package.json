@@ -1,20 +1,22 @@
 {
-  "name": "@deaquinodev/querky",
+  "name": "sql-term",
   "version": "0.5.0",
-  "description": "A quirky terminal SQL client with vim mode, AI features, and schema-aware autocomplete",
+  "description": "A terminal SQL client with vim mode, AI features, and schema-aware autocomplete",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "bin": {
-    "querky": "dist/index.js"
+    ":sql": "dist/index.js",
+    "sql-term": "dist/index.js"
   },
   "scripts": {
     "dev": "tsx src/index.tsx",
     "build": "tsup && chmod +x dist/index.js",
     "lint": "eslint src",
     "format": "prettier --write src",
-    "test": "vitest run"
+    "test": "vitest run",
+    "screenshot": "node scripts/screenshot.mjs"
   },
   "keywords": [],
   "author": "Arthur D'Aquino <arthurdaquinosilva@gmail.com>",
